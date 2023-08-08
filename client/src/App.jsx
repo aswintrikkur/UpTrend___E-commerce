@@ -1,13 +1,12 @@
-import './App.css'
+import "./App.css";
+import { Intro } from "./pages/Intro/Intro";
 
 function App() {
-
-  return (
-    <>
-    <h1>UpTrend___E-commerce website </h1>
-
-    </>
-  )
+	return (
+		<div div className="app-container">
+			<Intro />
+		</div>
+	);
 }
 
-export default App
+export default App;

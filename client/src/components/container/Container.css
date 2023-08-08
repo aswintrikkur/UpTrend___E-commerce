@@ -1,0 +1,14 @@
+#global-container{
+    width: 375px;
+    min-height: 812px;
+    background-color: var(--bg-color-primary);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(61, 60, 60, 0.507);
+    text-align: center;
+
+    /* display: grid;
+    grid-template-columns:  1fr 5fr 1fr;
+    grid-template-rows: 2fr 5fr 2fr; */
+
+}

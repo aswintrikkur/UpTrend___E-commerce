@@ -1,0 +1,17 @@
+.notification-container{
+    min-height: 22px;
+    width: 100%;
+    background-color: #ffffff33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 15px;
+
+}
+.notification-container p{
+    color: black;
+    font-weight: 600;
+}
+.notification-container .mob-signal img{
+    padding: 0 4px;
+}

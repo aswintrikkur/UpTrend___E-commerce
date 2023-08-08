@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
+.intro-container {
+	/* background-color: #e7e3e357; */
+    margin-top: 143px;
+}
+.intro-container h1 {
+	font-size: 50px;
+	font-weight: 600;
+}
+.intro-container h2 {
+	font-family: "Sacramento";
+    font-size: 40px;
+    font-weight: 400;
+}
