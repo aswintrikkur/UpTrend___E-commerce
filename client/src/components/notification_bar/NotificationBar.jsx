@@ -23,9 +23,9 @@ export const NotificationBar = () => {
 		<div className="notification-container">
 			<p>{time}</p>
 			<div className="mob-signal">
-				<img src="icons/Wifi.svg" alt="wifi" />
-				<img src="icons/Mobile Signal.svg" alt="mob" />
-				<img src="icons/Battery.svg" alt="battery" />
+				<img className="not-icon" src="icons/Wifi.svg" alt="wifi" />
+				<img className="not-icon" src="icons/Mobile Signal.svg" alt="mob" />
+				<img className="not-icon" src="icons/Battery.svg" alt="battery" />
 			</div>
 		</div>
 	);

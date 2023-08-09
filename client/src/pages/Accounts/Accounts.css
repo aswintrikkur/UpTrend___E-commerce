@@ -1,0 +1,27 @@
+.accounts-container {
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 773px;
+}
+.accounts-container h2 {
+	color: var(--text-color-primary);
+	font-size: var(--headline-h2);
+
+    margin-top: 65px;
+}
+.accounts-container .buttons{
+    margin-top: 185px;
+}
+.accounts-container p{
+    color: var(--text-color-secondary);
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+.accounts-container p span{
+    color: var(--color-black-white);
+}
+
+.accounts-container .large-button{
+
+}

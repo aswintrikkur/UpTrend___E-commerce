@@ -1,14 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
 .intro-container {
-	/* background-color: #e7e3e357; */
-    margin-top: 143px;
+	width: 375px;
+    min-height: 812px;
+    /* background-color: var(--bg-color-primary); */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(61, 60, 60, 0.507);
+	background-color: var(--bg-color-primary);
+	text-align: center;
 }
-.intro-container h1 {
+.intro-container .UpTrend{
+	padding-top: 145px;
+
+}
+.intro-container .UpTrend h1 {
 	font-size: 50px;
 	font-weight: 600;
 }
-.intro-container h2 {
+.intro-container .UpTrend h2 {
 	font-family: "Sacramento";
     font-size: 40px;
     font-weight: 400;
+}
+.intro-container .UpTrend .toggle-switch{
+	background-color: brown;
+	overflow: hidden;
+	scale: .85;
+
+}
+.fa-moon, .fa-sun{
+margin: 25% 30%;
+/* scale: 1.1; */
+}
+
+#back-btn{
+	display: none;
 }
