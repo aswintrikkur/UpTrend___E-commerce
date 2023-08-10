@@ -1,10 +1,10 @@
 import React from "react";
 import "./Button.css";
 
-export const BackButton = () => {
+export const FloatButton = ({icon}) => {
 	return (
-		<div className="back-btn-container">
-			<img className="btn back-btn" src="icons/Arrow - Left.svg" alt="" />
+		<div className="float-btn-container">
+			<img className="btn float-btn" src={icon} alt="" />
 		</div>
 	);
 };

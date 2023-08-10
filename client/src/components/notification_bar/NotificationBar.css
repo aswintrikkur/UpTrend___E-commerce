@@ -14,8 +14,6 @@
 }
 .notification-container .mob-signal .not-icon {
 	padding: 0 4px;
-	/* color: blue;
-	fill: green;
-	background-color: red; */
+	filter: var(--svg-color);
 }
 

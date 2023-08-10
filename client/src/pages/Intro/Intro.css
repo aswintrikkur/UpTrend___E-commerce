@@ -11,20 +11,20 @@
 }
 .intro-container .UpTrend{
 	padding-top: 145px;
-	color: white;
-
 }
 .intro-container .UpTrend h1 {
 	font-size: 50px;
 	font-weight: 600;
+	color: white;
 }
 .intro-container .UpTrend h2 {
 	font-family: "Sacramento";
     font-size: 40px;
     font-weight: 400;
+	color: white;
 }
 .intro-container .UpTrend .toggle-switch{
-	background-color: brown;
+	/* fill: white !important; */
 	overflow: hidden;
 	scale: .85;
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { Container } from "../../components/container/Container";
-import { BackButton, LargeButton } from "../../components/buttons/Button";
+import { FloatButton, LargeButton } from "../../components/buttons/Button";
 
 export const SignUp = () => {
 	const [field, setField] = useState({
@@ -33,7 +33,7 @@ export const SignUp = () => {
 	return (
 		<Container>
 			<div className="SignUp-container">
-				<BackButton />
+				<FloatButton  icon='icons/Arrow - Left.svg'/>
 				<h2>Sign Up</h2>
 				<form action="" className="form-container">
 					<div className="field" onClick={checkContent}>

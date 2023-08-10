@@ -23,8 +23,8 @@ export const Intro = ({ handleMode }) => {
 					className="toggle-switch"
 					checked={checked}
 					onChange={handleChange}
-					uncheckedIcon={<i className="fa-solid fa-sun"></i>}
-					checkedIcon={<i className="fa-solid fa-moon"></i>}
+					uncheckedIcon={<i className="fa-solid fa-sun" style={{color: 'white'}}></i>}
+					checkedIcon={<i className="fa-solid fa-moon" style={{color: 'black'}}></i>}
 				/>
 			</div>
 		</div>

@@ -1,10 +1,11 @@
 #global-container{
     width: 375px;
-    min-height: 812px;
+    height: 812px;
     background-color: var(--bg-color-secondary);
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(61, 60, 60, 0.507);
 
     position: relative;
+    overflow-y: scroll;
 }

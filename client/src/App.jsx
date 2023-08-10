@@ -3,6 +3,7 @@ import "./App.css";
 import { Accounts } from "./pages/Accounts/Accounts";
 import { Intro } from "./pages/Intro/Intro";
 import { SignUp } from "./pages/Signup/SignUp";
+import { Home } from "./pages/Home/Home";
 
 function App() {
 	const [mode, setMode] = useState("light");
@@ -16,6 +17,7 @@ function App() {
 			<Intro handleMode={handleMode} />
 			<Accounts />
 			<SignUp/>
+			<Home/>
 		</div>
 	);
 }

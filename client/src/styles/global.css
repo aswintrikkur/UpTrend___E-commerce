@@ -5,23 +5,17 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;;
-    /* color: var(--color-black-white); */
-    /* color: white; */
+    color: var(--text-color-primary);
 }
-
 #root{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
 }
-button{
-    cursor: pointer;
-}
-
 /* --------------scrollbar styling----------------- */
 ::-webkit-scrollbar{
-    width: 20px;
+    width: 8px;
 }
 ::-webkit-scrollbar-thumb{
     
@@ -30,4 +24,27 @@ button{
 }
 ::-webkit-scrollbar-track{
     background-color:  rgb(211, 182, 146);
+}
+
+/* --------------Button----------------- */
+button{
+    cursor: pointer;
+    outline: none;
+}
+button:focus,button:hover {
+    filter: brightness(93%);
+}
+
+/* ---------font size------------- */
+.b1{
+    font-size:17px ;
+}
+.b2{
+    font-size:15px ;
+}
+.b3{
+    font-size:13px ;
+}
+.b4{
+    font-size:11px ;
 }

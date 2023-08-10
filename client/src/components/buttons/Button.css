@@ -1,5 +1,5 @@
-/* Back Button */
-.back-btn-container {
+/* Float Button */
+.float-btn-container {
 	width: 45px;
 	height: 45px;
 	border-radius: 50%;
@@ -9,16 +9,16 @@
 	justify-content: center;
 	align-items: center;
 	color: rgb(254, 254, 254);
+	margin: 5px 20px;	
+}
 
-	margin-left: 20px;
-	margin-top: 5px;
+.float-btn-container:hover {
+	filter: contrast(80%);
 	
 }
-
-.back-btn-container:hover {
-	filter: contrast(80%);
+.float-btn-container .float-btn{
+	filter: var(--svg-color) ;
 }
-
 /* Account Button */
 .account-btn-container {
 	display: flex;

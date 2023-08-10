@@ -20,13 +20,17 @@
     --text-color-secondary:#8F959E;
     --color-black-white: black;
 
+    --svg-color:invert(0%);
+
 }
 
 :root #dark{
     --bg-color-primary:#1B262C;
     --bg-color-secondary:#1B262C;
-    --bg-color-ternary:#F5F6FA;
+    --bg-color-ternary:#222E34;
     --text-color-primary:#FFF;
     --text-color-secondary:#8F959E;
     --color-black-white: white;
+
+    --svg-color:invert(100%);
 }
