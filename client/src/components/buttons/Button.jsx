@@ -19,11 +19,11 @@ export const AccountButton = ({ text, color }) => {
 	);
 };
 
-export const LargeButton = ({ text, color }) => {
+export const LargeButton = ({ text, onClick }) => {
 	return (
 		<div className="large-btn-container">
-			<button className="large-btn">
-				<span>{text}</span>
+			<button className="large-btn" onClick={onClick}>
+				{text}
 			</button>
 		</div>
 	);

@@ -13,10 +13,10 @@ export const Intro = ({ handleMode }) => {
 	};
 
 	return (
-			<div className="intro-container">
-				<NotificationBar />
-		<div className="UpTrend">
-		<img src="images/logo_big.png" alt="logo" />
+		<div className="intro-container">
+			<NotificationBar />
+			<div className="UpTrend">
+				<img src="images/logo_big.png" alt="logo" />
 				<h1>UpTrend</h1>
 				<h2>Find Your Slyle</h2>
 				<ReactSwitch
@@ -26,8 +26,7 @@ export const Intro = ({ handleMode }) => {
 					uncheckedIcon={<i className="fa-solid fa-sun"></i>}
 					checkedIcon={<i className="fa-solid fa-moon"></i>}
 				/>
-
-		</div>
 			</div>
+		</div>
 	);
 };

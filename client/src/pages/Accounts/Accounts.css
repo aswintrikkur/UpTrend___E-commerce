@@ -2,7 +2,8 @@
 	text-align: center;
     display: flex;
     flex-direction: column;
-    height: 773px;
+    height: var(--mob-height);
+    
 }
 .accounts-container h2 {
 	color: var(--text-color-primary);
@@ -15,13 +16,10 @@
 }
 .accounts-container p{
     color: var(--text-color-secondary);
-    margin-top: auto;
-    margin-bottom: 25px;
+    margin-top: 140px;
 }
 .accounts-container p span{
     color: var(--color-black-white);
-}
-
-.accounts-container .large-button{
-
+    font-weight: 500;
+    
 }

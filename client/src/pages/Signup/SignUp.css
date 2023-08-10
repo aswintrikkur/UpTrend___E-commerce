@@ -1,0 +1,46 @@
+.SignUp-container {
+	/* align-items: center; */
+	display: flex;
+	flex-direction: column;
+	height: var(--mob-height);
+
+}
+.SignUp-container h2 {
+	text-align: center;
+	color: var(--text-color-primary);
+	font-size: var(--headline-h2);
+}
+.SignUp-container form {
+	margin: 0 20px;
+	margin-top: 248px;
+}
+.SignUp-container form .field{
+display: flex;
+flex-direction: column;
+}
+
+.SignUp-container form input {
+	border: none;
+	outline: none;
+	border-bottom: 1px solid var(--text-color-secondary);
+	background-color: transparent;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+	color: var(--text-color-primary);
+	font-size: var(--body-b2);
+	font-weight: 500;
+}
+.SignUp-container form label {
+    order: -1;
+    color: var(--text-color-secondary);
+    font-size: var(--body-b3);
+    font-weight: 400;
+    translate: 0 30px;
+    transition: .2s ease-in-out;
+}
+.SignUp-container form input:focus + label,
+.SignUp-container form input:not([ value='']) + label
+ {
+	translate: 0 ;
+}
