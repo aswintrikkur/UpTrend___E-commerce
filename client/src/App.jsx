@@ -4,6 +4,8 @@ import { Accounts } from "./pages/Accounts/Accounts";
 import { Intro } from "./pages/Intro/Intro";
 import { SignUp } from "./pages/Signup/SignUp";
 import { Home } from "./pages/Home/Home";
+import { Route, Routes } from "react-router-dom";
+import { Error } from "./pages/Error/Error";
 
 function App() {
 	const [mode, setMode] = useState("light");
@@ -14,10 +16,15 @@ function App() {
 
 	return (
 		<div div className="app-container" id={mode}>
-			<Intro handleMode={handleMode} />
-			<Accounts />
-			<SignUp/>
-			<Home/>
+
+			<Routes>
+				<Route path="/" element={<Intro handleMode={handleMode} />} />
+				<Route path="/accounts" element={<Accounts />} />
+				<Route path="/signup"  element={<SignUp/>}/>
+				<Route path="/home"  element={<Home handleMode={handleMode}/>}/>
+				<Route path="*"  element={<Error/>}/>
+			</Routes>
+			
 		</div>
 	);
 }

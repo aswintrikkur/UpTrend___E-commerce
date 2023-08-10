@@ -1,0 +1,7 @@
+.error-page-container {
+	width: 100%;
+	height: var(--mob-height);
+    text-align: center;
+	padding-top: 120px;
+    background-color: var(--bg-color-primary);
+}

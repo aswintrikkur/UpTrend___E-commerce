@@ -8,6 +8,7 @@
     border: 1px solid rgba(61, 60, 60, 0.507);
 	background-color: var(--bg-color-primary);
 	text-align: center;
+	position: relative;
 }
 .intro-container .UpTrend{
 	padding-top: 145px;
@@ -22,12 +23,12 @@
     font-size: 40px;
     font-weight: 400;
 	color: white;
+	margin-bottom: 50px;
 }
-.intro-container .UpTrend .toggle-switch{
+ .toggle-switch{
 	/* fill: white !important; */
 	overflow: hidden;
 	scale: .85;
-
 }
 .fa-moon, .fa-sun{
 margin: 25% 30%;

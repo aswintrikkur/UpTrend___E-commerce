@@ -3,6 +3,8 @@ import "./Intro.css";
 import { Container } from "../../components/container/Container";
 import { NotificationBar } from "../../components/notification_bar/NotificationBar";
 import ReactSwitch from "react-switch";
+import { LargeButton } from "../../components/buttons/Button";
+import { useNavigate } from "react-router-dom";
 
 export const Intro = ({ handleMode }) => {
 	const [checked, setChecked] = useState(false);
@@ -11,6 +13,8 @@ export const Intro = ({ handleMode }) => {
 		handleMode();
 		setChecked((prev) => !prev);
 	};
+
+	const navigate = useNavigate();
 
 	return (
 		<div className="intro-container">
@@ -23,10 +27,11 @@ export const Intro = ({ handleMode }) => {
 					className="toggle-switch"
 					checked={checked}
 					onChange={handleChange}
-					uncheckedIcon={<i className="fa-solid fa-sun" style={{color: 'white'}}></i>}
-					checkedIcon={<i className="fa-solid fa-moon" style={{color: 'black'}}></i>}
+					uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}
+					checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
 				/>
 			</div>
+			<LargeButton onClick={()=>navigate('/accounts')} text='Explore'/>
 		</div>
 	);
 };

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import { Container } from "../../components/container/Container";
 import { FloatButton, LargeButton } from "../../components/buttons/Button";
+import { useNavigate } from "react-router-dom";
+
 
 export const SignUp = () => {
 	const [field, setField] = useState({
@@ -9,6 +11,8 @@ export const SignUp = () => {
 		password: "",
 		email: "",
 	});
+
+	const navigate = useNavigate();
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;
@@ -33,7 +37,7 @@ export const SignUp = () => {
 	return (
 		<Container>
 			<div className="SignUp-container">
-				<FloatButton  icon='icons/Arrow - Left.svg'/>
+				<FloatButton onClick={()=>navigate(-1)}  icon='icons/Arrow - Left.svg'/>
 				<h2>Sign Up</h2>
 				<form action="" className="form-container">
 					<div className="field" onClick={checkContent}>
@@ -51,7 +55,7 @@ export const SignUp = () => {
 						<label htmlFor="email">Email</label>
 					</div>
 				</form>
-				<LargeButton text="Sign Up" onClick={handleUserSignUp} />
+				<LargeButton  text="Sign Up" onClick={()=>(handleUserSignUp(),navigate('/home'))} />
 			</div>
 		</Container>
 	);

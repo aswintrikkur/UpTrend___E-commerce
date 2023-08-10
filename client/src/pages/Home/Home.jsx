@@ -2,9 +2,16 @@ import React, { useEffect, useState } from "react";
 import "./Home.css";
 import { Container } from "../../components/container/Container";
 import { FloatButton } from "../../components/buttons/Button";
+import ReactSwitch from "react-switch";
 
-export const Home = () => {
+export const Home = ({handleMode}) => {
 	const [user, setUser] = useState("");
+	const [check, setCheck] = useState(false);
+
+	const handleChange = () => {
+		handleMode();
+		setCheck((prev) => !prev);
+	};
 
 	const userNameModify = (name) => {
 		const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -30,6 +37,14 @@ export const Home = () => {
 				<FloatButton icon="icons/menu.svg" />
 				<FloatButton icon="icons/Bag.svg" />
 			</div>
+			<ReactSwitch
+				className="toggle-switch tgl-btn"
+				checked={check}
+				onChange={handleChange}
+				uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}
+				checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
+			/>
+
 			<div className="home-container">
 				<h2>{user}</h2>
 				<span>Welcome to UpTrend</span>
@@ -65,44 +80,56 @@ export const Home = () => {
 					<div className="card-container">
 						<div className="card">
 							<img className="product-img" src="products/product2.png" alt="" />
-                            <i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<i className="fa-regular fa-heart"></i>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
 						<div className="card">
 							<img className="product-img" src="products/product1.png" alt="" />
-							<i className="fa-solid fa-heart" style={{color:'#d9202a'}}></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<i className="fa-solid fa-heart" style={{ color: "#d9202a" }}></i>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
 						<div className="card">
-							<img className="product-img"  src="products/product3.png" alt="" />
+							<img className="product-img" src="products/product3.png" alt="" />
 							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
 						<div className="card">
 							<img className="product-img" src="products/product4.png" alt="" />
 							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
-                        <div className="card">
+						<div className="card">
 							<img className="product-img" src="products/product1.png" alt="" />
 							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
-                        <div className="card">
+						<div className="card">
 							<img className="product-img" src="products/product2.png" alt="" />
 							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">Nike Sportswear <br/> 
-                            Club Fleece</pre>
+							<pre className="b4 item">
+								Nike Sportswear <br />
+								Club Fleece
+							</pre>
 							<p className="price b3">$99</p>
 						</div>
 					</div>
