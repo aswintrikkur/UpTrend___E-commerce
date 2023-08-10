@@ -5,7 +5,7 @@ import { NotificationBar } from "../notification_bar/NotificationBar";
 export const Container = ({ children }) => {
 	return (
 		<div id="global-container" >
-			<NotificationBar />
+			{/* <NotificationBar /> */}
 			{children}
 		</div>
 	);
