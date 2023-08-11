@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
 .intro-container {
-  /* width: 375px; */
-  width: 100vw;
-  /* min-height: 812px; */
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
+  width: min(400px, 100vw);
+  height: min(812px, 100vh);
+
   /* background-color: var(--bg-color-primary); */
   /* border-radius: 20px; */
   overflow: hidden;

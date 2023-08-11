@@ -1,8 +1,8 @@
 #global-container {
   /* width: 375px; */
-  width: 100vw;
   /* height: 812px; */
-  height: 100vh;
+  width: min(400px, 100vw);
+  height: min(812px, 100vh);
   background-color: var(--bg-color-secondary);
   /* border-radius: 20px; */
   border: 1px solid rgba(61, 60, 60, 0.507);
