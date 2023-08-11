@@ -1,40 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
 .intro-container {
-	width: 375px;
-    min-height: 812px;
-    /* background-color: var(--bg-color-primary); */
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(61, 60, 60, 0.507);
-	background-color: var(--bg-color-primary);
-	text-align: center;
-	position: relative;
+  /* width: 100vw;
+  height: 100vh; */
+  width: min(400px, 100vw);
+  height: min(812px, 100vh);
+
+  /* background-color: var(--bg-color-primary); */
+  /* border-radius: 20px; */
+  overflow: hidden;
+  border: 1px solid rgba(61, 60, 60, 0.507);
+  background-color: var(--bg-color-primary);
+  text-align: center;
+  position: relative;
 }
-.intro-container .UpTrend{
-	padding-top: 145px;
+.intro-container .UpTrend {
+  padding-top: 145px;
 }
 .intro-container .UpTrend h1 {
-	font-size: 50px;
-	font-weight: 600;
-	color: white;
+  font-size: 50px;
+  font-weight: 600;
+  color: white;
 }
 .intro-container .UpTrend h2 {
-	font-family: "Sacramento";
-    font-size: 40px;
-    font-weight: 400;
-	color: white;
-	margin-bottom: 50px;
+  font-family: "Sacramento";
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 50px;
 }
- .toggle-switch{
-	/* fill: white !important; */
-	overflow: hidden;
-	scale: .85;
+.toggle-switch {
+  /* fill: white !important; */
+  overflow: hidden;
+  scale: 0.85;
 }
-.fa-moon, .fa-sun{
-margin: 25% 30%;
-/* scale: 1.1; */
+.fa-moon,
+.fa-sun {
+  margin: 25% 30%;
+  /* scale: 1.1; */
 }
 
-#back-btn{
-	display: none;
+#back-btn {
+  display: none;
 }
