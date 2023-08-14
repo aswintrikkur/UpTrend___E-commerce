@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Home.css";
 import { Container } from "../../components/container/Container";
 import { FloatButton } from "../../components/buttons/Button";
 import ReactSwitch from "react-switch";
+import { ModeContext } from "../../context/ModeContext";
+import axios from "axios";
 
-export const Home = ({handleMode}) => {
+export const Home = () => {
 	const [user, setUser] = useState("");
-	const [check, setCheck] = useState(false);
+	const [productList, setProductList] = useState([]);
 
-	const handleChange = () => {
-		handleMode();
-		setCheck((prev) => !prev);
-	};
+	const { btnChecked, handleMode } = useContext(ModeContext);
 
 	const userNameModify = (name) => {
 		const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -27,8 +26,14 @@ export const Home = ({handleMode}) => {
 		setUser(name);
 	};
 
+	const fetchProductList = async () => {
+		const response = await axios("http://localhost:3000/api/productList");
+		setProductList(response.data);
+	};
+
 	useEffect(() => {
 		fetchUserFromLocalStorage();
+		fetchProductList();
 	}, []);
 
 	return (
@@ -39,8 +44,8 @@ export const Home = ({handleMode}) => {
 			</div>
 			<ReactSwitch
 				className="toggle-switch tgl-btn"
-				checked={check}
-				onChange={handleChange}
+				checked={btnChecked}
+				onChange={handleMode}
 				uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}
 				checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
 			/>
@@ -78,60 +83,20 @@ export const Home = ({handleMode}) => {
 						<p className="b3 ">View All</p>
 					</div>
 					<div className="card-container">
-						<div className="card">
-							<img className="product-img" src="products/product2.png" alt="" />
-							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
-						<div className="card">
-							<img className="product-img" src="products/product1.png" alt="" />
-							<i className="fa-solid fa-heart" style={{ color: "#d9202a" }}></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
-						<div className="card">
-							<img className="product-img" src="products/product3.png" alt="" />
-							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
-						<div className="card">
-							<img className="product-img" src="products/product4.png" alt="" />
-							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
-						<div className="card">
-							<img className="product-img" src="products/product1.png" alt="" />
-							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
-						<div className="card">
-							<img className="product-img" src="products/product2.png" alt="" />
-							<i className="fa-regular fa-heart"></i>
-							<pre className="b4 item">
-								Nike Sportswear <br />
-								Club Fleece
-							</pre>
-							<p className="price b3">$99</p>
-						</div>
+						{productList.map((data) => {
+							/* product List  */
+							return (
+								<div className="card">
+									<img className="product-img" src={data.image} alt="product1" />
+									<i className="fa-regular fa-heart"></i>
+									<p className="b4 item">
+										{data.brand} 
+									</p>
+									<p className="b4  title">{data.title}</p>
+									<p className="price b4">{data.price} ₹</p>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>

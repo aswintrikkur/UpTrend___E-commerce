@@ -99,18 +99,19 @@
   margin-bottom: 5px;
 }
 .new-arraival .card-container {
-  /* display: flex;
-	gap: 10px;
-	flex-wrap: wrap; */
+  /* background-color: rgb(71, 109, 190); */
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
+  grid-gap: 5px;
   /* grid-template-rows: 260px; */
   grid-auto-rows: 260px;
+  place-items: center;
+  overflow: hidden;
 }
 .new-arraival .card-container .card {
-  width: max-content;
+  /* width: max-content; */
+  /* background-color: rgba(128, 255, 0, 0.329); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -137,7 +138,13 @@
   scale: 1.1;
 }
 .card-container .card .item {
-  font-weight: 500;
+  font-weight: 600;
+  /* color: black; */
+}
+.card-container .card .title {
+  font-weight: 400;
+  
+  /* color: black; */
 }
 .card-container .card .price {
   font-weight: 600;

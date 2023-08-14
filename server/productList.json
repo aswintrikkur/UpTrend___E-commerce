@@ -1,0 +1,254 @@
+[
+    {
+    "id": 1,
+    "title": "Solid Crew-Neck Oversized T-Shirt",
+    "brand":"DILLINGER",
+    "price": 509.95,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg",
+    "size": ["XS","S", "M", "L", "XL"],
+    "rating": {
+    "rate": 3.9,
+    "count": 120
+    }
+    },
+    {
+    "id": 2,
+    "title": " Full Sleeves Slim Fit Shirt",
+    "brand":"DENNISLINGO PREMIUM",
+    "price": 647,
+    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230602/BHbE/6479732342f9e729d714c57b/-473Wx593H-462323964-green-MODEL.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "rating": {
+    "rate": 4.1,
+    "count": 259
+    }
+    },
+    {
+    "id": 3,
+    "title": "Arch Logo Embroidered Sherpa-Lined Hoodie",
+    "brand":"GAP",
+    "price": 1455.99,
+    "description": "https://assets.ajio.com/medias/sys_master/root/20230602/f6nB/647959b942f9e729d7117c0d/-473Wx593H-462152986-green-MODEL.jpg",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20221208/HQqK/6391fb20aeb269659cde8573/-473Wx593H-441589798-navy-MODEL.jpg",
+    "size": ["S", "M", "L", "XL"],
+    "rating": {
+    "rate": 4.7,
+    "count": 500
+    }
+    },
+    {
+    "id": 4,
+    "title": "Graphic Print Crew-Neck Oversized T-shirt",
+    "brand":"DIFFERENCE OF OPINION",
+    "price": 15.99,
+    "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230717/CxFM/64b4fc2ceebac147fc70ec02/-473Wx593H-464370970-green-MODEL.jpg",
+    "size": ["XS","S", "M", "L", "XL"],
+    "rating": {
+    "rate": 2.1,
+    "count": 430
+}
+    },
+    {
+    "id": 5,
+    "title": "Flat-Front Trousers with Insert Pockets",
+    "brand":"NETPLAY",
+    "price": 595,
+    "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20220531/tgSn/62955c72f997dd03e24ca712/-473Wx593H-441140292-olive-MODEL.jpg",
+    "size": ["XS","S", "M", "L", "XL"],
+    "rating": {
+    "rate": 4.6,
+    "count": 400
+    }
+    },
+    {
+    "id": 6,
+    "title": "Striped Top with Neck-Tie",
+    "brand":"FERY LONDON",
+    "price": 968,
+    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230626/CNkG/649993f8a9b42d15c9f2fa85/-473Wx593H-466307826-multi-MODEL.jpg",
+    "size": ["XS","S", "M", "L", "XL"],
+    "rating": {
+    "rate": 4.4,
+    "count": 70
+    }
+    },
+    {
+    "id": 7,
+    "title": "Floral Print V-neck Top",
+    "brand":"SHAYE",
+    "price": 799,
+    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230602/yURM/64798b0e42f9e729d7177293/-473Wx593H-462506144-cream-MODEL.jpg",
+    "size": ["S", "M", "L"],
+    "rating": {
+    "rate": 3,
+    "count": 400
+    }
+    },
+    {
+    "id": 8,
+    "title": "Round-Neck Top with Drop-Shoulder Sleeves",
+    "brand":"TEAMSPIRIT",
+    "price": 370,
+    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20221123/fnlS/637dbe84f997ddfdbd92979b/-473Wx593H-443003932-lavender-MODEL.jpg",
+    "size": ["S", "M", "L"],
+    "rating": {
+    "rate": 1.9,
+    "count": 100
+    }
+    },
+    {
+    "id": 9,
+    "title": "Court Vision Mid-Top Sneakers",
+    "brand":"NIKE",
+    "price": 5264,
+    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20220205/6IRP/61fd84c1f997dd03e2c1ad63/-473Wx593H-469098331-white-MODEL.jpg",
+    "size": ["7", "8", "9","10","11"],
+    "rating": {
+    "rate": 4.8,
+    "count": 203
+    }
+    },
+    {
+    "id": 10,
+    "title": "Club Round-Toe Lace-Up Sneakers",
+    "brand":"PUMA",
+    "price": 4700,
+    "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20220908/KZiz/63190c6faeb269dbb3792003/-473Wx593H-469249914-black-MODEL.jpg",
+    "size": ["7", "8", "9","10","11"],
+    "rating": {
+    "rate": 2.9,
+    "count": 470
+    }
+    },
+    {
+    "id": 11,
+    "title": "Ankle Length Boots with Lace Fastening",
+    "brand":"MONDAIN",
+    "price": 609,
+    "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230630/r8HP/649e2efda9b42d15c92c1d87/-473Wx593H-466321669-black-MODEL.jpg",
+    "size": ["7", "8", "9","10","11"],
+    "rating": {
+    "rate": 2.8,
+    "count": 319
+    }
+    },
+    {
+    "id": 12,
+    "title": "Round-Toe Lace-Up Sneakers",
+    "brand":"SHOETOPIA",
+    "price": 814,
+    "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230628/SLy9/649bbb37a9b42d15c90855dc/-473Wx593H-465933978-white-MODEL3.jpg",
+    "size": ["7", "8", "9","10"],
+    "rating": {
+    "rate": 4.8,
+    "count": 400
+    }
+    },
+    {
+    "id": 13,
+    "title": "Colourblock Lace-Up Sneakers",
+    "brand":"BUDA JEANS CO",
+    "price": 1599,
+    "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230227/Zn0U/63fc9a74aeb26924e392acbb/-473Wx593H-469241222-grey-MODEL2.jpg",
+    "size": ["7", "8", "9","10"],
+    "rating": {
+    "rate": 4.2,
+    "count": 250
+    }
+    },
+    {
+    "id": 14,
+    "title": "Low-Tops Lace-Up Sneakers",
+    "brand":"LONGWALK", 
+    "price": 1099,
+    "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+    "category": "electronics",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230629/8ogK/649d22e0a9b42d15c925fea3/-473Wx593H-466084406-white-MODEL.jpg",
+    "size": ["7", "8", "9","10"],
+    "rating": {
+    "rate": 2.2,
+    "count": 140
+    }
+    },
+    {
+    "id": 15,
+    "title": "Slim Fit Pants with Elasticated Waist",
+    "brand":"DNMX",
+    "price": 556,
+    "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230313/87Ci/640f02d2f997dde6f4f3d3d3/-473Wx593H-443008697-olive-MODEL.jpg",
+    "size": ["28", "30", "32","34","36"],
+    "rating": {
+    "rate": 2.6,
+    "count": 235
+    }
+    },
+    {
+    "id": 16,
+    "title": "Lightly Distressed Slim Fit Jeans",
+    "brand":"THE INDIAN GARAGE CO",
+    "price": 1399,
+    "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+    "category": "men's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20210923/ovv7/614b7854f997ddce89d75509/-473Wx593H-469009841-blue-MODEL.jpg",
+    "size": ["28", "30", "32","34","36"],
+    "rating": {
+    "rate": 2.9,
+    "count": 340
+    }
+    },
+    {
+    "id": 17,
+    "title": "Light-Wash Cargo Jeans",
+    "brand":"FREEHAND",
+    "price": 1089,
+    "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230804/L38H/64cd1b5feebac147fca87a39/-473Wx593H-469520569-grey-MODEL4.jpg",
+    "size": ["28", "30", "32","34","36"],
+    "rating": {
+    "rate": 4.1,
+    "count": 679
+    }
+    },
+    {
+    "id": 18,
+    "title": "Slim Fit Cargo Pants with Insert Pockets",
+    "brand":"IVOC",
+    "price": 9.85,
+    "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+    "category": "women's clothing",
+    "image": "https://assets.ajio.com/medias/sys_master/root/20230629/CODI/649cf2a8a9b42d15c9205bd6/-473Wx593H-466087892-grey-MODEL.jpg",
+    "size": ["28", "30", "32","34","36"],
+    "rating": {
+    "rate": 4.7,
+    "count": 130
+    }
+    }
+    ]
