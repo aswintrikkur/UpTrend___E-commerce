@@ -14,6 +14,13 @@ app.listen(PORT, () => {
 
 //  ------api---------
 app.get('/api/productList', (req, res) => {
-res.json(productList);
+    res.json(productList);
 
 })
+
+app.get('/api/productDetails', (req, res) => {
+    console.log('api request reached server');
+    const {id}= req.query;
+    const productDetails= productList.find(data=>(data.id==id))
+    res.json(productDetails);
+});

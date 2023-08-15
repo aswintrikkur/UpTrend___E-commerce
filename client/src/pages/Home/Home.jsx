@@ -5,12 +5,16 @@ import { FloatButton } from "../../components/buttons/Button";
 import ReactSwitch from "react-switch";
 import { ModeContext } from "../../context/ModeContext";
 import axios from "axios";
+import { API_URL } from "../../api";
+import { useNavigate } from "react-router-dom";
+import { handleAddToWishList } from "../../utils";
 
 export const Home = () => {
 	const [user, setUser] = useState("");
 	const [productList, setProductList] = useState([]);
-
 	const { btnChecked, handleMode } = useContext(ModeContext);
+
+	const navigate = useNavigate();
 
 	const userNameModify = (name) => {
 		const newName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -27,9 +31,10 @@ export const Home = () => {
 	};
 
 	const fetchProductList = async () => {
-		const response = await axios("http://localhost:3000/api/productList");
+		const response = await axios(`${API_URL}/api/productList`);
 		setProductList(response.data);
 	};
+
 
 	useEffect(() => {
 		fetchUserFromLocalStorage();
@@ -83,20 +88,19 @@ export const Home = () => {
 						<p className="b3 ">View All</p>
 					</div>
 					<div className="card-container">
-						{productList.map((data) => {
-							/* product List  */
-							return (
-								<div className="card">
+						{productList.map((data) /* product List  */ => (
+							<div className="card" key={data.id} >
+								<div className="img-container" onClick={() => navigate(`/productDetails/${data.id}`)}>
 									<img className="product-img" src={data.image} alt="product1" />
-									<i className="fa-regular fa-heart"></i>
-									<p className="b4 item">
-										{data.brand} 
-									</p>
+								</div>
+								<i className="fa-regular fa-heart" onClick={handleAddToWishList}></i>
+								<div className="text-container">
+									<p className="b4 brand">{data.brand}</p>
 									<p className="b4  title">{data.title}</p>
 									<p className="price b4">{data.price} ₹</p>
 								</div>
-							);
-						})}
+							</div>
+						))}
 					</div>
 				</div>
 			</div>

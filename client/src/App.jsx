@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import { Error } from "./pages/Error/Error";
 import { useContext } from "react";
 import { ModeContext } from "./context/ModeContext";
+import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 
 function App() {
 	const { mode } = useContext(ModeContext);
@@ -18,6 +19,7 @@ function App() {
 				<Route path="/accounts" element={<Accounts />} />
 				<Route path="/signup" element={<SignUp />} />
 				<Route path="/home" element={<Home />} />
+				<Route path="/productDetails/:id" element={<ProductDetails />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
 		</div>
