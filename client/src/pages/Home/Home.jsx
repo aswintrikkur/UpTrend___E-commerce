@@ -13,6 +13,7 @@ export const Home = () => {
 	const [user, setUser] = useState("");
 	const [productList, setProductList] = useState([]);
 	const { btnChecked, handleMode } = useContext(ModeContext);
+	const [searchProductList, setSearchProductList] = useState("");
 
 	const navigate = useNavigate();
 
@@ -31,10 +32,39 @@ export const Home = () => {
 	};
 
 	const fetchProductList = async () => {
-		const response = await axios(`${API_URL}/api/productList`);
+		const response = await axios(`${API_URL}/api/ProductList`);
 		setProductList(response.data);
 	};
 
+	const handleSearchProductList = (event) => {
+		setSearchProductList(event.target.value);
+		console.log(searchProductList);
+	};
+
+	const fetchSearchProductList = async () => {
+		try {
+			const response = await axios(`${API_URL}/api/searchProductList`, {
+				method: "GET",
+				params: {
+					value: searchProductList,
+				},
+			});
+			setProductList(response.data);
+			console.log(response);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			fetchSearchProductList();
+		}, 500);
+
+		  return () => {
+			clearTimeout(timer)
+		  }
+	}, [searchProductList]);
 
 	useEffect(() => {
 		fetchUserFromLocalStorage();
@@ -60,7 +90,7 @@ export const Home = () => {
 				<span>Welcome to UpTrend</span>
 				<div className="search-bar">
 					<img src="icons/Search.svg" className="search-icon" alt="" />
-					<input className="search-input" placeholder="Search..." type="text" />
+					<input className="search-input" placeholder="Search..." onChange={handleSearchProductList} type="text" />
 					<button className="voice-btn">
 						<img src="icons/Voice.svg" alt="" />
 					</button>
@@ -88,8 +118,8 @@ export const Home = () => {
 						<p className="b3 ">View All</p>
 					</div>
 					<div className="card-container">
-						{productList.map((data) /* product List  */ => (
-							<div className="card" key={data.id} >
+						{productList?.map((data) /* product List  */ => (
+							<div className="card" key={data.id}>
 								<div className="img-container" onClick={() => navigate(`/productDetails/${data.id}`)}>
 									<img className="product-img" src={data.image} alt="product1" />
 								</div>

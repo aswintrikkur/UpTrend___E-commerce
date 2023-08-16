@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const productList = require('./productList.json')
+const productList = require('./productList.json');
+const { searchValueOnDB } = require('./utils');
+
 
 const app = express();
 app.use(express.json());
@@ -18,9 +20,21 @@ app.get('/api/productList', (req, res) => {
 
 })
 
-app.get('/api/productDetails', (req, res) => {
+app.get('/api/productDetails/:id', (req, res) => {   // here mentioned get method request is expecting id
     console.log('api request reached server');
-    const {id}= req.query;
-    const productDetails= productList.find(data=>(data.id==id))
+    const { id } = req.params;   // simply passing id(param) along with url
+    // const {id}= req.query; //while passing as query params
+    const productDetails = productList.find(data => (data.id == id))
     res.json(productDetails);
+});
+
+app.get('/api/searchProductList', (req, res) => {
+    const { value } = req.query;
+    console.log(value);
+    const searchProductList = productList.filter(data => {
+        return ( searchValueOnDB(value,data) )
+    });
+    console.log(searchProductList);
+    res.json(searchProductList);
+
 });

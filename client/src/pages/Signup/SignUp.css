@@ -8,10 +8,11 @@
 	text-align: center;
 	color: var(--text-color-primary);
 	font-size: var(--headline-h2);
+	margin-top: 80px;
 }
 .SignUp-container form {
 	margin: 0 20px;
-	margin-top: 248px;
+	margin-top: 200px;
 }
 .SignUp-container form .field{
 display: flex;

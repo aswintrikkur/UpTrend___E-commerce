@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./Intro.css";
-import { Container } from "../../components/container/Container";
-import { NotificationBar } from "../../components/notification_bar/NotificationBar";
 import ReactSwitch from "react-switch";
 import { LargeButton } from "../../components/buttons/Button";
 import { useNavigate } from "react-router-dom";
@@ -9,9 +7,15 @@ import { useContext } from "react";
 import { ModeContext } from "../../context/ModeContext";
 
 export const Intro = () => {
-	const { mode, btnChecked, handleMode } = useContext(ModeContext);
+	const { btnChecked, handleMode } = useContext(ModeContext);
 
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		setTimeout(() => {
+			navigate("/accounts");
+		}, 4000);
+	}, []);
 
 	return (
 		<div className="intro-container">
@@ -20,7 +24,8 @@ export const Intro = () => {
 				<img src="images/logo_big.png" alt="logo" />
 				<h1>UpTrend</h1>
 				<h2>Find Your Slyle</h2>
-				<ReactSwitch className="toggle-switch"
+				<ReactSwitch
+					className="toggle-switch"
 					checked={btnChecked}
 					onChange={handleMode}
 					uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}

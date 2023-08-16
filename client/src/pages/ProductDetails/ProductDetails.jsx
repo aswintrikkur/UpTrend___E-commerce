@@ -16,12 +16,13 @@ export const ProductDetails = () => {
 
 	const fetchProductDetails = async (id) => {
 		try {
-			const response = await axios(`${API_URL}/api/productDetails`, {
-				method: "GET",
-				params: {
-					id,
-				},
-			});
+			const response = await axios(`${API_URL}/api/productDetails/${id}` //simply passing id(param) along with url
+			// const response = await axios(`${API_URL}/api/productDetails`, { //passing as query params
+			// 	method: "GET",
+			// 	params: {
+			// 		id,
+			// 	},
+			);
 			setProductDetails(response.data);
 		} catch (error) {
 			console.log(error);
@@ -34,10 +35,10 @@ export const ProductDetails = () => {
 	};
 
 	const handleCountIncrement = () => {
-		setCount((prev) => prev + 1);
+		{ count<10 && setCount((prev) => prev + 1)};
 	};
 	const handleCountDecrement = () => {
-		setCount((prev) => prev - 1);
+		{ count>0 && setCount((prev) => prev - 1)};
 	};
 
 	useEffect(() => {
@@ -71,7 +72,7 @@ export const ProductDetails = () => {
 						<p className="b1">size</p>
 						<div>
 							{productDetails.size?.map((data) => (
-								<button className="size" onClick={handleSizeSelection}>
+								<button className="size" key={data} onClick={handleSizeSelection}>
 									{" "}
 									{data}
 								</button>
