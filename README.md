@@ -37,8 +37,8 @@
 ## Preview
 <image  width='500' src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/a6a93165-df0b-4c0a-94ae-9207f184b7f7">   
 <br>
-<image  width='500' src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/c0cee683-c35c-4495-b69f-01c519652de1">
-<image  width='500' src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/8da6b2d3-d57a-404d-961b-0d9c726c574f">
+<image  width='370' src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/c0cee683-c35c-4495-b69f-01c519652de1">
+<image  width='370' src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/8da6b2d3-d57a-404d-961b-0d9c726c574f">
 <!--
 <image src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/b3aedd68-aafb-4287-8838-c242422160dd" height="400">
 <image src="https://github.com/aswintrikkur/UpTrend___E-commerce/assets/125629462/6a93bef3-de68-4956-9b86-87fedfa92b3b" height="400">
