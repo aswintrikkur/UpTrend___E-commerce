@@ -1,0 +1,141 @@
+.float-btn-top {
+	display: flex;
+	justify-content: space-between;
+}
+.tgl-btn {
+	position: absolute;
+	right: -290px;
+	top: 30px;
+	scale: 0.67;
+}
+
+.home-container {
+	padding: 0 20px;
+	overflow-y: scroll;
+
+	span {
+		font-size: var(--body-b2);
+		color: var(--text-color-secondary);
+		font-weight: 400;
+	}
+
+	& > h2 {
+		margin-top: 30px;
+		color: var(--text-color-primary);
+		font-size: var(--headline-h2);
+		font-weight: 800;
+	}
+
+	/* -------Search bar------- */
+	.search-bar {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		position: relative;
+
+		.search-icon {
+			position: absolute;
+			left: 15px;
+		}
+
+		.search-input {
+			border: none;
+			width: max(275px, 74vw);
+			height: 50px;
+			padding: 15px;
+			padding-left: 45px;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: var(--body-b2);
+			font-weight: 600;
+			color: var(--text-color-secondary);
+			background-color: var(--bg-color-ternary);
+			border-radius: 10px;
+			outline: none;
+		}
+		.voice-btn {
+			width: max(50px, 13vw);
+			height: 50px;
+			border-radius: 10px;
+			background-color: #9775fa;
+			border: none;
+		}
+	}
+
+	/* -------brand--------- */
+	.choose-brand {
+		margin-top: 25px;
+	}
+	.common-div {
+		.title {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+
+			h3 {
+				font-weight: 600;
+			}
+			p {
+				color: var(--text-color-secondary);
+				font-weight: 500;
+			}
+		}
+		.content-container {
+			display: flex;
+			gap: 10px;
+			overflow-x: auto;
+			overflow-y: hidden;
+
+			.content {
+				// width: 115px;
+				height: 50px;
+				padding:  6px 10px;
+				// word-break: keep-all;
+				background-color: var(--bg-color-ternary);
+				font-size: var(--body-b3);
+				border-radius: 10px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.content h4 {
+				font-weight: 500;
+			}
+		}
+	}
+
+	/* ----------New Arraival---------- */
+	.new-arraival {
+		margin-top: 15px;
+
+		h3 {
+			margin-bottom: 5px;
+		}
+		.card-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 5px;
+			overflow: hidden;
+
+
+
+		}
+	}
+}
+
+//================= break-point 1 ==================
+
+@media (min-width: 500px) {
+	.home-container{
+
+		.new-arraival{
+
+			
+			.card-container {
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+				grid-gap: 15px;
+				row-gap: 20px;
+			}
+		}
+	}
+}

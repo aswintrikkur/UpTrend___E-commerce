@@ -12,29 +12,31 @@ export const Intro = () => {
 	const navigate = useNavigate();
 
 	useEffect(() => {
+
 		setTimeout(() => {
 			navigate("/accounts");
-		}, 4000);
+		}, 2000);
+
 	}, []);
 
 	return (
 		<div className="intro-container">
 			{/* <NotificationBar /> */}
 			<div className="UpTrend">
-				<img src="images/logo_big.png" alt="logo" />
+				<img src="images/logo_big.png" className="logo" alt="logo" />
 				<h1>UpTrend</h1>
 				<h2>Find Your Slyle</h2>
-				<ReactSwitch
+				{/* <ReactSwitch
 					className="toggle-switch"
 					checked={btnChecked}
 					onChange={handleMode}
 					uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}
 					checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
-				/>
+				/> */}
 			</div>
-			<div style={{ border: "1px soid black" }}>
+			{/* <div style={{ border: "1px soid black" }}>
 				<LargeButton onClick={() => navigate("/accounts")} text="Explore" />
-			</div>
+			</div> */}
 		</div>
 	);
 };

@@ -2,12 +2,26 @@
   /* width: 375px; */
   /* height: 812px; */
   width: min(400px, 100vw);
+
   height: min(812px, 100vh);
   background-color: var(--bg-color-secondary);
   /* border-radius: 20px; */
   border: 1px solid rgba(61, 60, 60, 0.507);
 
-  overflow: auto;
+  overflow-y: auto ;
+  overflow-x: hidden ;
   position: relative;
 }
- 
+
+
+
+/*=====break point1=========  */
+@media (min-width: 500px ){
+
+  #global-container{
+    width: 100vw;
+    height: 100vh;
+
+  }
+
+}

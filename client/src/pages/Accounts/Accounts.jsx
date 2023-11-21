@@ -29,7 +29,7 @@ export const Accounts = () => {
 					<AccountButton text="Twitter" color="#1DA1F2" />
 					<AccountButton text="Google" color="#EA4335" />
 				</div>
-				<p>Already have an account? <span>Signin</span></p>
+				<p>Already have an account? <span onClick={()=>navigate('/login')  } >Login</span></p>
 				<LargeButton className='large-button' onClick={()=>navigate('/signup')  } text='Create an Account' />
 			</div>
 		</Container>

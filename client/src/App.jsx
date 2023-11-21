@@ -8,6 +8,8 @@ import { Error } from "./pages/Error/Error";
 import { useContext } from "react";
 import { ModeContext } from "./context/ModeContext";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
+import { ProtectedRoute } from "./components/protectedRoute";
+import { Login } from "./pages/login/Login";
 
 function App() {
 	const { mode } = useContext(ModeContext);
@@ -18,9 +20,12 @@ function App() {
 				<Route path="/" element={<Intro />} />
 				<Route path="/accounts" element={<Accounts />} />
 				<Route path="/signup" element={<SignUp />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/productDetails/:id" element={<ProductDetails />} />
-				<Route path="*" element={<Error />} />
+				<Route path="/login" element={<Login/> } />
+				<Route element={<ProtectedRoute/> }>
+					<Route path="/home" element={<Home />} />
+					<Route path="/productDetails/:id" element={<ProductDetails />} />
+					<Route path="*" element={<Error />} />
+				</Route>
 			</Routes>
 		</div>
 	);

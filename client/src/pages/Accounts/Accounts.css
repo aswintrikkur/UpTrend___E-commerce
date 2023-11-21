@@ -2,7 +2,7 @@
 	text-align: center;
     display: flex;
     flex-direction: column;
-    height: var(--mob-height);
+    /* height: var(--mob-height); */
     overflow: hidden;
     
 }
@@ -17,10 +17,24 @@
 }
 .accounts-container p{
     color: var(--text-color-secondary);
-    margin-top: 140px;
+    margin-top: 100px;
 }
 .accounts-container p span{
     color: var(--color-black-white);
     font-weight: 500;
-    
+    cursor: pointer;    
+}
+
+
+/*==========break point1 ============*/
+@media (min-width:500px){
+
+    .accounts-container h2 {    
+        margin-top: 20px;
+    }
+    .accounts-container .buttons{
+        margin-top: 100px;
+    }   
+
+
 }

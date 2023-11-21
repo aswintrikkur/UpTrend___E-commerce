@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
-import "./SignUp.scss";
+import "../Signup/SignUp.scss";
 import { Container } from "../../components/container/Container";
 import { FloatButton, LargeButton } from "../../components/buttons/Button";
 import { useNavigate } from "react-router-dom";
 import ReactSwitch from "react-switch";
 import { ModeContext } from "../../context/ModeContext";
 
-export const SignUp = () => {
+export const Login = () => {
 	const [field, setField] = useState({
 		userName: "",
 		password: "",
@@ -48,11 +48,11 @@ export const SignUp = () => {
 					checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
 				/>
 
-				<h2>SIGN UP</h2>
+				<h2>LOG IN</h2>
 				<form action="" className="form-container">
 					<div className="field" onClick={checkContent}>
 						<input id="user-name" value={field.userName} name="userName" type="text" onChange={handleChange} />
-						<label htmlFor="user-name">User Name</label>
+						<label htmlFor="user-name">User Name / Email</label>
 					</div>
 
 					<div className="field">
@@ -60,12 +60,12 @@ export const SignUp = () => {
 						<label htmlFor="password">Password</label>
 					</div>
 
-					<div className="field">
+					{/* <div className="field">
 						<input id="email" value={field.email} name="email" type="email" onChange={handleChange} />
 						<label htmlFor="email">Email</label>
-					</div>
+					</div> */}
 				</form>
-				<LargeButton text="Sign Up" onClick={() => (handleUserSignUp(), navigate("/home"))} />
+				<LargeButton text="Log In" onClick={() => (handleUserSignUp(), navigate("/home"))} />
 			</div>
 		</Container>
 	);

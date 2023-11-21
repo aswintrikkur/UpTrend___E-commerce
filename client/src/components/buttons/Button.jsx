@@ -1,5 +1,5 @@
 import React from "react";
-import "./Button.css";
+import "./Button.scss";
 
 export const FloatButton = ({onClick,icon}) => {
 	return (
@@ -28,3 +28,15 @@ export const LargeButton = ({ text, onClick }) => {
 		</div>
 	);
 };
+
+export const CartButton = ({ text, onClick }) => {
+	return (
+		<div className="cart-btn-container">
+			<button className="cart-btn" onClick={onClick}  >
+				{text}
+			</button>
+		</div>
+	);
+};
+
+

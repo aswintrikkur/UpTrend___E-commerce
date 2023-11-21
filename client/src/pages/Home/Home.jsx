@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Home.css";
+import "./Home.scss";
 import { Container } from "../../components/container/Container";
 import { FloatButton } from "../../components/buttons/Button";
 import ReactSwitch from "react-switch";
@@ -8,6 +8,7 @@ import axios from "axios";
 import { API_URL } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { handleAddToWishList } from "../../utils";
+import { ProductCard } from "../../components/card/Card";
 
 export const Home = () => {
 	const [user, setUser] = useState("");
@@ -56,14 +57,15 @@ export const Home = () => {
 		}
 	};
 
+	//----- search field debouncing -------
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			fetchSearchProductList();
 		}, 500);
 
-		  return () => {
-			clearTimeout(timer)
-		  }
+		return () => {
+			clearTimeout(timer);
+		};
 	}, [searchProductList]);
 
 	useEffect(() => {
@@ -77,13 +79,13 @@ export const Home = () => {
 				<FloatButton icon="icons/menu.svg" />
 				<FloatButton icon="icons/Bag.svg" />
 			</div>
-			<ReactSwitch
+			{/* <ReactSwitch
 				className="toggle-switch tgl-btn"
 				checked={btnChecked}
 				onChange={handleMode}
 				uncheckedIcon={<i className="fa-solid fa-sun" style={{ color: "white" }}></i>}
 				checkedIcon={<i className="fa-solid fa-moon" style={{ color: "black" }}></i>}
-			/>
+			/> */}
 
 			<div className="home-container">
 				<h2>{user}</h2>
@@ -101,15 +103,20 @@ export const Home = () => {
 						<p className="b3 ">View All</p>
 					</div>
 					<div className="content-container">
-						<div className="content">
-							<h4> Adidas</h4>
-						</div>
-						<div className="content">
+						{productList.map((data, index) => {
+								return (
+									<div className="content">
+										{/* <h4> Adidas</h4> */}
+										<h4>{data?.brand}</h4>
+									</div>
+								);
+						})}
+						{/* <div className="content">
 							<h4>Nike</h4>
 						</div>
 						<div className="content">
 							<h4>Fila</h4>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<div className="new-arraival common-div">
@@ -117,19 +124,10 @@ export const Home = () => {
 						<h3 className="b1 ">New Arraival</h3>
 						<p className="b3 ">View All</p>
 					</div>
-					<div className="card-container">
-						{productList?.map((data) /* product List  */ => (
-							<div className="card" key={data.id}>
-								<div className="img-container" onClick={() => navigate(`/productDetails/${data.id}`)}>
-									<img className="product-img" src={data.image} alt="product1" />
-								</div>
-								<i className="fa-regular fa-heart" onClick={handleAddToWishList}></i>
-								<div className="text-container">
-									<p className="b4 brand">{data.brand}</p>
-									<p className="b4  title">{data.title}</p>
-									<p className="price b4">{data.price} ₹</p>
-								</div>
-							</div>
+
+					<div className="card-container" /* product List  */>
+						{productList?.map((data) => (
+							<ProductCard data={data} key={data.id} />
 						))}
 					</div>
 				</div>

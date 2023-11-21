@@ -4,11 +4,15 @@
     --headline-h1: 34px;
     --headline-h2: 28px;
     --headline-h3: 22px;
+    --headline-h4: 20px;
 
     --body-b1:17px;
     --body-b2:15px;
     --body-b3:13px;
     --body-b4:11px;
+
+
+    --break-point1: 500px
 }
 
 
@@ -19,6 +23,8 @@
     --text-color-primary:#1D1E20;
     --text-color-secondary:#8F959E;
     --color-black-white: black;
+
+
 
     --svg-color:invert(0%);
 
