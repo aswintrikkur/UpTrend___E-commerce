@@ -8,7 +8,7 @@ import { Error } from "./pages/Error/Error";
 import { useContext } from "react";
 import { ModeContext } from "./context/ModeContext";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
-import { ProtectedRoute } from "./components/protectedRoute";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Login } from "./pages/login/Login";
 
 function App() {
