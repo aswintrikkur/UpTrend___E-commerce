@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.scss";
 
-export const FloatButton = ({onClick,icon}) => {
+export const FloatButton = ({ onClick, icon }) => {
 	return (
 		<div className="float-btn-container" onClick={onClick}>
 			<img className="btn float-btn" src={icon} alt="<" />
@@ -29,14 +29,13 @@ export const LargeButton = ({ text, onClick }) => {
 	);
 };
 
-export const CartButton = ({ text, onClick }) => {
+export const CartButton = ({ text, icon, onClick }) => {
 	return (
 		<div className="cart-btn-container">
-			<button className="cart-btn" onClick={onClick}  >
+			<button className="cart-btn" onClick={onClick}>
 				{text}
+				{icon}
 			</button>
 		</div>
 	);
 };
-
-

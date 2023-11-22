@@ -11,7 +11,8 @@
 
 .home-container {
 	padding: 0 20px;
-	overflow-y: scroll;
+	// overflow-y: scroll;
+	// position: relative;
 
 	span {
 		font-size: var(--body-b2);
@@ -28,15 +29,25 @@
 
 	/* -------Search bar------- */
 	.search-bar {
-		margin-top: 20px;
+		position: sticky;
+		top: 78px;
+		z-index: 4;
+		padding: 20px 0;
+		background-color: var(--bg-color-secondary);		
+		// width: fit-content;
+		// padding-left: 5%;
+		width: 100vw;
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		position: relative;
+		// position: relative;
+
+		
 
 		.search-icon {
 			position: absolute;
-			left: 15px;
+			margin-left: 15px;
+			// left: 15px;
 		}
 
 		.search-input {
@@ -64,7 +75,7 @@
 
 	/* -------brand--------- */
 	.choose-brand {
-		margin-top: 25px;
+		// margin-top: 25px;
 	}
 	.common-div {
 		.title {

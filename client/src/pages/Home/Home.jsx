@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Home.scss";
 import { Container } from "../../components/container/Container";
 import { FloatButton } from "../../components/buttons/Button";
@@ -15,6 +15,7 @@ export const Home = () => {
 	const [productList, setProductList] = useState([]);
 	const { btnChecked, handleMode } = useContext(ModeContext);
 	const [searchProductList, setSearchProductList] = useState("");
+	const targetRef = useRef(null);
 
 	const navigate = useNavigate();
 
@@ -73,12 +74,34 @@ export const Home = () => {
 		fetchProductList();
 	}, []);
 
+	//------ handle sticky ------
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+		  ([entry]) => {
+			const { target, isIntersecting } = entry;
+			if (!isIntersecting) {
+			  target.classList.add('is-sticky');
+			  console.log(isIntersecting,'isIntersecting');
+			} else {
+				target.classList.remove('is-sticky');
+				console.log(isIntersecting,'isIntersecting');
+			}
+		  },
+		  { threshold: 0 }
+		);
+		if (targetRef.current) {
+		  observer.observe(targetRef.current);
+		}
+		return () => observer.disconnect(); // Clean up the observer on component unmount
+	  }, []);
+	
+
 	return (
-		<Container>
-			<div className="float-btn-top">
+		<Container showHeader={true}>
+			{/* <div className="float-btn-top">
 				<FloatButton icon="icons/menu.svg" />
 				<FloatButton icon="icons/Bag.svg" />
-			</div>
+			</div> */}
 			{/* <ReactSwitch
 				className="toggle-switch tgl-btn"
 				checked={btnChecked}
@@ -90,8 +113,8 @@ export const Home = () => {
 			<div className="home-container">
 				<h2>{user}</h2>
 				<span>Welcome to UpTrend</span>
-				<div className="search-bar">
-					<img src="icons/Search.svg" className="search-icon" alt="" />
+				<div className="search-bar" ref={targetRef}>
+					<img src="icons/Search.svg" className="search-icon" alt="" />{" "}
 					<input className="search-input" placeholder="Search..." onChange={handleSearchProductList} type="text" />
 					<button className="voice-btn">
 						<img src="icons/Voice.svg" alt="" />
@@ -104,12 +127,12 @@ export const Home = () => {
 					</div>
 					<div className="content-container">
 						{productList.map((data, index) => {
-								return (
-									<div className="content">
-										{/* <h4> Adidas</h4> */}
-										<h4>{data?.brand}</h4>
-									</div>
-								);
+							return (
+								<div className="content" key={index}>
+									{/* <h4> Adidas</h4> */}
+									<h4>{data?.brand}</h4>
+								</div>
+							);
 						})}
 						{/* <div className="content">
 							<h4>Nike</h4>

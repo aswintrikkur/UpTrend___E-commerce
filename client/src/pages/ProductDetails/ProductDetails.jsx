@@ -96,8 +96,8 @@ export const ProductDetails = () => {
 							</div>
 						</div>
 						<div className="buttons">
-							<CartButton text="Add to Wishlist" />
-							<CartButton text="Add to Cart" />
+							<CartButton text="Add to Wishlist"   />
+							<CartButton text="Add to Cart"  />
 						</div>
 
 						{/* <button>Add to Wishlist</button> */}
