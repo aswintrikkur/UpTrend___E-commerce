@@ -144,8 +144,9 @@
 			
 			.card-container {
 				grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-				grid-gap: 15px;
-				row-gap: 20px;
+				// grid-template-columns: repeat(auto-fit ,  200px);
+				grid-gap: 50px;
+				place-content: center;
 			}
 		}
 	}

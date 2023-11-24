@@ -9,6 +9,7 @@ import { API_URL } from "../../api";
 import { useNavigate } from "react-router-dom";
 import { handleAddToWishList } from "../../utils";
 import { ProductCard } from "../../components/card/Card";
+import useMenu from "../../hooks/useMenu";
 
 export const Home = () => {
 	const [user, setUser] = useState("");
@@ -16,6 +17,7 @@ export const Home = () => {
 	const { btnChecked, handleMode } = useContext(ModeContext);
 	const [searchProductList, setSearchProductList] = useState("");
 	const targetRef = useRef(null);
+
 
 	const navigate = useNavigate();
 
@@ -52,7 +54,7 @@ export const Home = () => {
 				},
 			});
 			setProductList(response.data);
-			console.log(response);
+			// console.log(response);
 		} catch (error) {
 			console.log(error);
 		}
@@ -73,31 +75,32 @@ export const Home = () => {
 		fetchUserFromLocalStorage();
 		fetchProductList();
 	}, []);
+	
 
 	//------ handle sticky ------
-	useEffect(() => {
-		const observer = new IntersectionObserver(
-		  ([entry]) => {
-			const { target, isIntersecting } = entry;
-			if (!isIntersecting) {
-			  target.classList.add('is-sticky');
-			  console.log(isIntersecting,'isIntersecting');
-			} else {
-				target.classList.remove('is-sticky');
-				console.log(isIntersecting,'isIntersecting');
-			}
-		  },
-		  { threshold: 0 }
-		);
-		if (targetRef.current) {
-		  observer.observe(targetRef.current);
-		}
-		return () => observer.disconnect(); // Clean up the observer on component unmount
-	  }, []);
+	// useEffect(() => {
+	// 	const observer = new IntersectionObserver(
+	// 	  ([entry]) => {
+	// 		const { target, isIntersecting } = entry;
+	// 		if (!isIntersecting) {
+	// 		  target.classList.add('is-sticky');
+	// 		  console.log(isIntersecting,'isIntersecting');
+	// 		} else {
+	// 			target.classList.remove('is-sticky');
+	// 			console.log(isIntersecting,'isIntersecting');
+	// 		}
+	// 	  },
+	// 	  { threshold: 0 }
+	// 	);
+	// 	if (targetRef.current) {
+	// 	  observer.observe(targetRef.current);
+	// 	}
+	// 	return () => observer.disconnect(); // Clean up the observer on component unmount
+	//   }, []);
 	
 
 	return (
-		<Container showHeader={true}>
+		<Container showHeader={true} >
 			{/* <div className="float-btn-top">
 				<FloatButton icon="icons/menu.svg" />
 				<FloatButton icon="icons/Bag.svg" />

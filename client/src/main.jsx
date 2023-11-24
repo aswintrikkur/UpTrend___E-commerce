@@ -4,11 +4,15 @@ import App from "./App.jsx";
 import "./styles/global.css";
 import { BrowserRouter } from "react-router-dom";
 import { ModeProvider } from "./context/ModeContext.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-		<ModeProvider>
-			<BrowserRouter>
+	<ModeProvider>
+		<BrowserRouter>
+			<Provider store={store}>
 				<App />
-			</BrowserRouter>
-		</ModeProvider>
+			</Provider>
+		</BrowserRouter>
+	</ModeProvider>
 );
