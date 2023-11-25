@@ -10,22 +10,26 @@ import { ModeContext } from "./context/ModeContext";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Login } from "./pages/login/Login";
+import { Cart } from "./pages/cart/Cart";
+import { Wishlist } from "./pages/wishlist/Wishlist";
 
 function App() {
 	const { mode } = useContext(ModeContext);
 
 	return (
-		<div div className="app-container" id={mode}>
+		<div className="app-container" id={mode}>
 			<Routes>
 				<Route path="/" element={<Intro />} />
 				<Route path="/accounts" element={<Accounts />} />
 				<Route path="/signup" element={<SignUp />} />
-				<Route path="/login" element={<Login/> } />
-				<Route element={<ProtectedRoute/> }>
+				<Route path="/login" element={<Login />} />
+				<Route element={<ProtectedRoute />}>
 					<Route path="/home" element={<Home />} />
 					<Route path="/productDetails/:id" element={<ProductDetails />} />
-					<Route path="*" element={<Error />} />
+					<Route path="/cart" element={<Cart />} />
+					<Route path="/wishlist" element={<Wishlist />} />
 				</Route>
+				<Route path="*" element={<Error />} />
 			</Routes>
 		</div>
 	);

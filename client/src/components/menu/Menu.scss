@@ -7,40 +7,61 @@
 	background-color: var(--bg-color-secondary);
 	z-index: 6;
 
-	box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.39);
-    transition: .5s ease-in-out;
+	// box-shadow: 10px 0 10px 0 rgba(0, 0, 0, 0.39);
+	box-shadow: 10px 0 15px 0px var(--shadow-color);
+
+	transition: 0.5s;
 
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding: 20px;
+	overflow: hidden;
 
 	.profile {
 		margin: 20px 0;
 		display: flex;
+		align-items: baseline;
+		gap: 20px;
+
+		i{
+			scale: 1.2;
+		}
+
 	}
 
 	ul {
-		margin-top: 40px;
-
+		margin-top: 10px;
 		li {
+			// filter: contrast(50%);
+			font-weight: 500;
 			list-style: none;
-			margin: 10px 0;
+			margin: 12px 0;
+		}
+	}
+	.log-out{
+		margin-top: 40px;
+		font-weight: 500;
+		filter: contrast(70%);
+
+		span i{
+			// filter: contrast(50%);
+			// color: var(--text-color-secondary) ;
 		}
 	}
 }
 .bg-blur {
 	width: 100%;
-	height: 100vh;
-	// filter: blur(15px);
+	height: 100%;
+	position: fixed;
 	backdrop-filter: blur(2px);
 	// background:green;
 	text-align: center;
-	position: absolute;
 	z-index: 5;
 }
 
+// ============ menu animation ============
 .menu-open {
 	rotate: 90deg;
-	background-color: 255, 255, 255, 0.2;
+	transition: 0.5s;
 }

@@ -33,7 +33,7 @@
 		top: 78px;
 		z-index: 4;
 		padding: 20px 0;
-		background-color: var(--bg-color-secondary);		
+		background-color: var(--bg-color-secondary);
 		// width: fit-content;
 		// padding-left: 5%;
 		width: 100vw;
@@ -41,8 +41,6 @@
 		align-items: center;
 		gap: 10px;
 		// position: relative;
-
-		
 
 		.search-icon {
 			position: absolute;
@@ -52,7 +50,7 @@
 
 		.search-input {
 			border: none;
-			width: max(275px, 74vw);
+			width: max(275px, 74%);
 			height: 50px;
 			padding: 15px;
 			padding-left: 45px;
@@ -65,11 +63,43 @@
 			outline: none;
 		}
 		.voice-btn {
-			width: max(50px, 13vw);
+			width: max(50px, 13%);
 			height: 50px;
 			border-radius: 10px;
 			background-color: #9775fa;
 			border: none;
+			overflow: hidden;
+			position: relative;
+		}
+		.voice-btn-animation {
+			// background-color: red;
+		}
+		.voice-btn-animation::after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: linear-gradient(45deg, rgba(255, 255, 255, 0.3),  rgba(255, 255, 255, 0.1));
+
+			content: " ";
+			// width: 100%;
+			height: 100%;
+			animation: searching 2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+		@keyframes searching {
+			0% {
+				width: 0%;
+				// translate: 0 20px;
+			}
+			50% {
+				// translate: 0 0px;
+				width: 50%;
+			}
+			100% {
+				width: 100%;
+				// translate: 0 20px;
+			}
 		}
 	}
 
@@ -100,7 +130,7 @@
 			.content {
 				// width: 115px;
 				height: 50px;
-				padding:  6px 10px;
+				padding: 6px 10px;
 				// word-break: keep-all;
 				background-color: var(--bg-color-ternary);
 				font-size: var(--body-b3);
@@ -127,9 +157,6 @@
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 5px;
 			overflow: hidden;
-
-
-
 		}
 	}
 }
@@ -137,13 +164,10 @@
 //================= break-point 1 ==================
 
 @media (min-width: 500px) {
-	.home-container{
-
-		.new-arraival{
-
-			
+	.home-container {
+		.new-arraival {
 			.card-container {
-				grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 				// grid-template-columns: repeat(auto-fit ,  200px);
 				grid-gap: 50px;
 				place-content: center;

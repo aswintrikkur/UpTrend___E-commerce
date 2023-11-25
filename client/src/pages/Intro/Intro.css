@@ -49,10 +49,14 @@ animation-fill-mode: forwards;
 }
 .toggle-switch {
 	/* fill: white !important; */
-	overflow: hidden;
-	scale: 0.85;
+	/* width: 10px; */
+
+	/* overflow: hidden; */
+	scale: 0.5;
+	/* padding-bottom: 20px ; */
 	margin-left: auto;
 	margin-right: 40px;
+
 }
 .fa-moon,
 .fa-sun {

@@ -51,9 +51,9 @@ export const ProductDetails = () => {
 	}, []);
 
 	return (
-		<Container>
+		<Container showHeader>
 			<div className="product-details-container">
-				<FloatButton onClick={() => navigate(-1)} icon="/icons/Arrow - Left.svg" />
+				{/* <FloatButton onClick={() => navigate(-1)} icon="/icons/Arrow - Left.svg" /> */}
 				<div className="product">
 					<div className="col1">
 						<p className="brand">{productDetails.brand}</p>
@@ -61,17 +61,31 @@ export const ProductDetails = () => {
 						<div className="product-img-container">
 							<img className="product-img" src={productDetails.image} alt={"product id:" + params.id} />
 						</div>
-						<i className="fa-regular fa-heart" onClick={handleAddToWishList}></i>
+						<i className="fa-regular fa-heart"  onClick={handleAddToWishList}> </i>
 					</div>
 
 					<div className="col2">
-						
 						<div className="carrousel">
-						<img src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg" alt="product" />
-						<img src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg" alt="product" />
-						<img src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg" alt="product" />
-						<img src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg" alt="product" />
-						<img src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg" alt="product" />
+							<img
+								src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg"
+								alt="product"
+							/>
+							<img
+								src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg"
+								alt="product"
+							/>
+							<img
+								src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg"
+								alt="product"
+							/>
+							<img
+								src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg"
+								alt="product"
+							/>
+							<img
+								src="https://assets.ajio.com/medias/sys_master/root/20230624/VYr3/6495fdfaa9b42d15c9cd42b5/-473Wx593H-465048960-maroon-MODEL.jpg"
+								alt="product"
+							/>
 						</div>
 
 						<p className="price">{productDetails.price} ₹</p>
@@ -96,8 +110,8 @@ export const ProductDetails = () => {
 							</div>
 						</div>
 						<div className="buttons">
-							<CartButton text="Add to Wishlist"   />
-							<CartButton text="Add to Cart"  />
+							<CartButton text="Add to Wishlist" />
+							<CartButton text="Add to Cart" />
 						</div>
 
 						{/* <button>Add to Wishlist</button> */}

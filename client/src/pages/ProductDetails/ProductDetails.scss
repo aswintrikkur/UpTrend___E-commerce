@@ -2,7 +2,7 @@
 	padding-top: 20px;
 
 	.product {
-		margin: 30px 10px;
+		margin:  10px;
 		display: flex;
 		flex-direction: column;
 		gap: 3px;
@@ -17,9 +17,11 @@
 			.title {
 				font-size: var(--body-b1);
 				font-weight: 500;
+				margin-bottom: 12px;
 			}
 			.product-img-container {
 				max-width: 380px;
+				border-radius: 10px;
 				display: flex;
 				justify-content: center;
 				overflow: hidden;

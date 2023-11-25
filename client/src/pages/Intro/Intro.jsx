@@ -4,10 +4,8 @@ import ReactSwitch from "react-switch";
 import { LargeButton } from "../../components/buttons/Button";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { ModeContext } from "../../context/ModeContext";
 
 export const Intro = () => {
-	const { btnChecked, handleMode } = useContext(ModeContext);
 
 	const navigate = useNavigate();
 

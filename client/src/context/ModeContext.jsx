@@ -11,5 +11,5 @@ export const ModeProvider = ({ children }) => {
 		setBtnChecked((prev) => !prev);
 	};
 
-	return (<ModeContext.Provider value={{ mode, btnChecked, handleMode }}>{children}</ModeContext.Provider>);
+	return <ModeContext.Provider value={{ mode, btnChecked, handleMode }}>{children}</ModeContext.Provider>;
 };
