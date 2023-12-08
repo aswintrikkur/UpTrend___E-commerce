@@ -15,7 +15,6 @@ const menuSlice = createSlice({
             if (!state.showMenu) {
                 // menuIcon.style.backgroundColor='red';
                 menuIcon.classList.add('menu-open');
-
             }
             else {
                 menuIcon.classList.remove('menu-open')
@@ -29,4 +28,5 @@ const menuSlice = createSlice({
 
 export const { toggleMenu } = menuSlice.actions;
 
+// export const menuReducer = menuSlice.reducer; 
 export default menuSlice.reducer; 

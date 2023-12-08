@@ -23,7 +23,6 @@ export const SignUp = () => {
 			[name]: value,
 		}));
 	};
-	console.log(field);
 
 	const checkContent = (event) => {
 		if (event.target.value !== "") {
@@ -33,7 +32,6 @@ export const SignUp = () => {
 	const handleUserSignUp = () => {
 		localStorage.setItem("user", JSON.stringify(field));
 		setField({ userName: "", password: "", email: "" });
-		console.log("User Signed Up");
 	};
 
 	return (

@@ -1,62 +1,76 @@
 .card {
-    margin: 0 auto;
-    margin-bottom: 8px;
-    max-width: 160px;
-    /* background-color: rgba(128, 255, 0, 0.329); */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 8px;
+	max-width: 160px;
 
-    .img-container {
-        /* width: min-content; */
-        overflow: hidden;
-        border-radius: 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+    justify-content: center;
+	overflow: hidden;
 
-        .product-img {
-            background-color: #f3f3f3;
-            width: 160px;
-            height: 203px;
-            /* object-fit: contain; */
-            /* overflow: hidden; */
-            transition: 0.4s ease-in-out;
+	.img-container {
+		/* width: min-content; */
+		overflow: hidden;
+		border-radius: 15px;
 
-            &:hover {
-                scale: 1.03;
-            }
-        }
-    }
+		.product-img {
+			background-color: #f3f3f3;
+			width: 160px;
+			height: 203px;
+			/* object-fit: contain; */
+			/* overflow: hidden; */
+			transition: 0.4s ease-in-out;
 
-    .fa-heart {
-        position: absolute;
-        right: 12px;
-        top: 15px;
-        color: var(--text-color-secondary);
-        transition: 0.3s ease-in;
-        z-index: 3;
-    }
-    .fa-heart:hover {
-        scale: 1.1;
-    }
-    .text-container {
-        /* margin-top: 2px; */
-        margin-left: 5px;
+			&:hover {
+				scale: 1.03;
+			}
+		}
+	}
 
+	.fa-heart {
+		position: absolute;
+		right: 12px;
+		top: 15px;
+		color: var(--text-color-secondary);
+		transition: 0.3s ease-in;
+		z-index: 3;
+	}
+	.fa-heart:hover {
+		scale: 1.1;
+	}
+	.text-container {
+		/* margin-top: 2px; */
+		margin-left: 5px;
 
-         .brand {
-            font-weight: 600;
-        }
-         .title {
-            white-space: nowrap;
-            overflow: hidden;
-            font-weight: 400;
-            text-overflow: ellipsis;
-            margin: 2px 0px;
-        }
-         .price {
-            /* line-height: 5px; */
-            font-weight: 600;
-        }
-    }
+		.brand {
+			font-weight: 600;
+		}
+		.title {
+			white-space: nowrap;
+			overflow: hidden;
+			font-weight: 400;
+			text-overflow: ellipsis;
+			margin: 2px 0px;
+		}
+		.price {
+			/* line-height: 5px; */
+			font-weight: 600;
+		}
+	}
+}
+
+@media (min-width: 500px) {
+
+	.card {
+        // max-width: 170px;
+		.img-container {
+
+			.product-img {
+				// width: 170px;
+                height: auto;
+			}
+		}
+	}
 }

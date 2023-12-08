@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "../../components/container/Container";
 import './Cart.scss'
+import { ProductCard } from "../../components/card/Card";
 
 export const Cart = () => {
 	return (
@@ -9,7 +10,9 @@ export const Cart = () => {
 
                 <h1>CART</h1>
 
-                <h3 style={{margin:'100px 0'}} >Under Development</h3>
+				{/* <ProductCard /> */}
+
+                {/* <h3 style={{margin:'100px 0'}} >Under Development</h3> */}
             </div>
 		</Container>
 	);

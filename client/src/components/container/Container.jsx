@@ -11,7 +11,7 @@ export const Container = ({ showHeader = false, children }) => {
 	return (
 		<div id="global-container">
 			{showHeader && <Header />}
-			{showMenu && <Menu />}
+			{showHeader && showMenu && <Menu />}
 			{/* <NotificationBar /> */}
 			{children}
 		</div>

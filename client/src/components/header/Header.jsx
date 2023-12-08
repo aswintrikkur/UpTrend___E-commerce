@@ -2,14 +2,14 @@ import React, { useRef } from "react";
 import "./Header.scss";
 import { FloatButton } from "../buttons/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../redux/menu";
+import { toggleMenu } from "../../redux/features/menuSlice";
 import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
 	const navigate = useNavigate();
 
 	//===== redux =========
-	// const { showMenu } = useSelector((state) => state.menu);
+	const { showMenu } = useSelector((state) => state.menu);
 	const dispatch = useDispatch();
 
 	return (
@@ -31,11 +31,22 @@ export const Header = () => {
 			</button>
 
 			<div className="header-container " name="header">
-				<div className="logo">
+				<div
+					className="logo"
+					onClick={() => {
+						navigate("/home");
+					}}
+				>
 					<img src="/images/logo_big.png" alt="" />
 					{/* <img src="logo/UpTrend_logo.svg" alt="" /> */}
 				</div>
-				<h2>UPTREND</h2>
+				<h2 className="company"
+					onClick={() => {
+						navigate("/home");
+					}}
+				>
+					UPTREND
+				</h2>
 
 				<div className="nav">
 					<i
@@ -53,9 +64,7 @@ export const Header = () => {
 						style={{ color: "#ffffff" }}
 					></i>
 
-					{/* <p>WISHLIST</p> */}
-					{/* <p>CART</p> */}
-					{/* <p>LOG OUT</p> */}
+
 				</div>
 			</div>
 		</>

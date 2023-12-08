@@ -43,7 +43,7 @@
 			height: 100%;
 		}
 	}
-	h2 {
+	.company {
 		// display: none;
 		// margin-top: auto;
 		// margin-bottom: 15px;
@@ -51,6 +51,9 @@
 		// color:#9775FA ;
 		font-size: var(--headline-h3);
 		font-weight: 700;
+	}
+	.logo,.company:hover{
+		cursor: pointer;
 	}
 	.nav {
 		padding-right: 30px;

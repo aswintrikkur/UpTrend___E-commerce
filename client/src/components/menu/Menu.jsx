@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import "./Menu.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../../redux/menu";
+import { toggleMenu } from "../../redux/features/menuSlice";
 import ReactSwitch from "react-switch";
 import { ModeContext } from "../../context/ModeContext";
 
 export const Menu = () => {
 	const { btnChecked, handleMode } = useContext(ModeContext);
-	const { showMenu } = useSelector((state) => state.menu);
+	const {showMenu } = useSelector((state) => state.menu);
 	const dispatch = useDispatch();
 
 	const user = JSON.parse(localStorage.getItem("user"))?.userName || "Unknown";
